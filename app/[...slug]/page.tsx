@@ -2,7 +2,7 @@ import { notFound } from "next/navigation"
 import { Metadata } from "next"
 import { allPages } from "contentlayer/generated"
 
-import { Mdx } from "@/components/mdx-components"
+import { Mdx } from "@/components/Template/mdx-components"
 
 interface PageProps {
   params: {
@@ -24,13 +24,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: page.title,
-    description: page.description,
+    description: page.description
   }
 }
 
 export async function generateStaticParams(): Promise<PageProps["params"][]> {
   return allPages.map((page) => ({
-    slug: page.slugAsParams.split("/"),
+    slug: page.slugAsParams.split("/")
   }))
 }
 

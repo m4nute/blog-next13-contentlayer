@@ -1,7 +1,7 @@
 import "./styles/globals.css"
 import { Fira_Code } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
-import { ModeToggle } from "@/components/mode-toggle"
+import { ThemeProvider } from "@/components/Template/theme-provider"
+import { ModeToggle } from "@/components/Template/mode-toggle"
 import Navbar from "@/components/Navbar/index"
 
 const fira = Fira_Code({ subsets: ["latin"] })
