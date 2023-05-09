@@ -1,0 +1,85 @@
+---
+title: My VSCode Settings
+description: Full VSCode Configuration guide
+date: "2023-05-09"
+---
+
+Welcome! In this post, I'll share with you my entire _VSCode config_, from extensions, snippets, settings and more!
+
+## Extensions
+
+1. ### _Fundamentals_
+
+   - **One Dark Pro**: Best theme IMO, I use the darker version.
+
+   - **Prettier**: Most popular code formatter.
+
+   - **Path Intellisense**: Autocomplete for filenames.
+
+   - **npm Intellisense**: Autocomplete for npm imports.
+
+   - **vscode-icons**: Better and colorfull icons for all type of files.
+
+2. ### _Personal Preferences / Stack Related_
+
+   - **Tailwind CSS IntelliSense**: Autocomplete for Tailwind classes.
+
+   - **Auto Rename Tag**: Auto rename paired tags
+
+   - **Color Highlight**: Highlights hex codes with actual color.
+
+   - **Gitmoji**: Cool Emojis for your commits.
+
+   - **Pretty TypeScript Errors**: Human-readable errors, finally.
+
+   - **Multiple cursor case preserver**: Keep cases when you Ctrl+D a bunch of text.
+
+   - **Import Cost**: Display package size along with your imports.
+
+   - **Fluent Icons**: Prettier icons at your left sidebar.
+
+   - **Glean**: Refactoring tools for your react components.
+
+   - **Shellscape Brackets**: Less invasive bracket pair identification.
+
+   - **ES7+ React snippets**: For React hooks, components, etc.
+
+   - **React - Typescript snippets**: More React snippets.
+
+## Settings
+
+To easily modify your settings, press Ctrl+Comma and click on the top right file icon to open **settings.json**.
+Once you're there, start including the settings you're interesed in.
+
+- **Font**: I use Cascadia Code. Before applying the following line, make sure to [download](https://github.com/microsoft/cascadia-code/releases/tag/v2111.01) the font and install it on your system. I also turn on fontLigatures.
+
+  ```json title="settings.json"
+  "editor.fontFamily": "'Cascadia Code', 'monospace', monospace",
+  "editor.fontLigatures": true,
+  ```
+
+- **Cursor**: If you want an animated cursor, try these settings.
+
+  ```json title="settings.json"
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  ```
+
+- **Prettier**: This section is highly opinionated. I just hate short lines and semicolons...
+
+  ```json title="settings.json"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.semi": false,
+  "prettier.bracketSameLine": true,
+  "prettier.printWidth": 150,
+  "editor.formatOnSave": true,
+  ```
+
+- **Save Space**: Need more space? Disable all this. Slightly opinionated as well.
+
+  ```json title="settings.json"
+  "breadcrumbs.enabled": false,
+  "workbench.statusBar.visible": false,
+  "editor.glyphMargin": false,
+  "editor.overviewRulerBorder": false,
+  ```

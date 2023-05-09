@@ -1,17 +1,13 @@
-import { allPosts } from "@/.contentlayer/generated"
-import Link from "next/link"
+import Posts from "@/components/Posts"
 
 export default function Home() {
   return (
-    <div className="prose dark:prose-invert">
-      {allPosts.map((post) => (
-        <article key={post._id}>
-          <Link href={post.slug}>
-            <h2>{post.title}</h2>
-          </Link>
-          {post.description && <p>{post.description}</p>}
-        </article>
-      ))}
+    <div className="prose dark:prose-invert max-w-[700px]">
+      <p className="my-10">
+        Welcome to my personal blog. Here, I&apos;ll be sharing my thoughts on various topics that I&apos;m passionate about. I also want to document
+        my journey from now on, so this should work as a journal. Hop in!
+      </p>
+      <Posts />
     </div>
   )
 }
