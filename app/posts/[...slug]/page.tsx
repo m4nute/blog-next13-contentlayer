@@ -48,14 +48,11 @@ export default async function PostPage({ params }: PostProps) {
   }
 
   return (
-    <article className="py-6 w-full prose prose-sm dark:prose-invert max-w-[940px]">
-      <h1 className="mb-2 max-w-[680px]">{post.title}</h1>
-      {post.description && <p className="m-0 text-xl text-slate-700 dark:text-slate-200 max-w-[680px]">{post.description}</p>}
-
-      <section className="sticky top-6 hidden h-0 xl:!col-start-4 xl:row-start-2 md:block">
+    <article className="pb-24 w-full prose prose-sm dark:prose-invert max-w-[1100px] mx-auto h-fit">
+      <section className="hidden h-1 xl:!col-start-4 xl:row-start-2 md:block fixed">
         {post.headings ? (
           <div className="flex justify-end w-full">
-            <div className="space-y-2 text-sm w-[calc(100%-700px)]">
+            <div className="space-y-2 text-sm">
               <h2 className="text-[#f1f1f1] mb-0">Navigation Bar</h2>
 
               {post.headings.map((heading: any) => {
@@ -76,7 +73,9 @@ export default async function PostPage({ params }: PostProps) {
         ) : null}
       </section>
 
-      <div className="max-w-[680px]">
+      <div className="max-w-[680px] mx-auto w-full">
+        <h1 className="mb-2 max-w-[680px]">{post.title}</h1>
+        {post.description && <p className="m-0 text-xl text-slate-700 dark:text-slate-200 max-w-[680px]">{post.description}</p>}
         <Mdx code={post.body.code} />
       </div>
     </article>
