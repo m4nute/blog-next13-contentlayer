@@ -48,7 +48,7 @@ export default async function PostPage({ params }: PostProps) {
   }
 
   return (
-    <article className="pb-24 w-full prose prose-sm dark:prose-invert max-w-[1100px] mx-auto h-fit">
+    <article className="pb-24 w-full prose dark:prose-invert max-w-[1100px] mx-auto h-fit">
       <section className="hidden h-1 xl:!col-start-4 xl:row-start-2 md:block fixed">
         {post.headings ? (
           <div className="flex justify-end w-full">
