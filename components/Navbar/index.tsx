@@ -1,4 +1,5 @@
 import Avatar from "./Avatar"
+import { IconHome } from "@tabler/icons-react"
 
 export default function Navbar() {
   return (
@@ -7,6 +8,11 @@ export default function Navbar() {
         <section className="flex">
           <Avatar />
           <h1 className="flex flex-col justify-center pl-3">Manuel Gudiño</h1>
+        </section>
+        <section className="flex flex-col justify-center">
+          <button className="bg-[#373737] p-2 rounded-lg">
+            <IconHome size={24} stroke={1.25} className="transition-all hover:stroke-2 hover:opacity-80" />
+          </button>
         </section>
       </nav>
     </div>
