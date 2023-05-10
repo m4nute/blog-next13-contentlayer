@@ -53,7 +53,7 @@ export default async function PostPage({ params }: PostProps) {
         {post.headings ? (
           <div className="flex justify-end w-full">
             <div className="space-y-2 text-sm">
-              <h2 className="text-[#f1f1f1] mb-0">Navigation Bar</h2>
+              <h2 className="text-[#f1f1f1] mb-0">Sections</h2>
 
               {post.headings.map((heading: any) => {
                 return (
