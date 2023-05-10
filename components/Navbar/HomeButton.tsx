@@ -15,7 +15,6 @@ export default function HomeButton() {
         <Tooltip.Portal>
           <Tooltip.Content className="rounded-[4px] bg-[#373737] text-sm px-2 py-1 will-change-[transform,opacity]" sideOffset={5}>
             Home
-            <Tooltip.Arrow className="fill-[#373737]" />
           </Tooltip.Content>
         </Tooltip.Portal>
       </Tooltip.Root>

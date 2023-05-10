@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar"
 import { ThemeProvider } from "@/components/Template/theme-provider"
 import { Fira_Code } from "next/font/google"
 import "./styles/globals.css"
-import "animate.css"
 
 export const metadata = {
   title: "Next.js",
