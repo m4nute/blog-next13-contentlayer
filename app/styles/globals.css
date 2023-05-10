@@ -24,3 +24,7 @@
 .prose *:hover > .anchor {
   @apply visible no-underline;
 }
+
+html {
+  scroll-behavior: smooth;
+}
