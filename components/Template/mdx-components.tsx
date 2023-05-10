@@ -4,10 +4,10 @@ interface MdxProps {
   code: string
 }
 const components = {
-  h1: (props: any) => <h2 className=" pt-8 mt-6 text-xl font-medium border-t-2 border-[#2c2c2c] sm:text-3xl" {...props} />,
+  h1: (props: any) => <h2 className=" pt-8 mt-6 text-xl mb-4 underline font-medium border-t-2 border-[#2c2c2c] sm:text-3xl" {...props} />,
   h2: (props: any) => <h3 className="pt-8 mt-3 text-xl font-medium sm:text-2xl text-[#e1e1e1]" {...props} />,
-  h3: (props: any) => <h4 className="text-xl font-medium text-rose-100/90" {...props} />,
-  h4: (props: any) => <h5 className="text-lg font-medium text-rose-100/90" {...props} />,
+  h3: (props: any) => <h4 className="text-xl font-medium text-[#e1e1e1]" {...props} />,
+  h4: (props: any) => <h5 className="text-lg font-medium text-[#e1e1e1]" {...props} />,
   hr: (props: any) => <hr className="relative my-5 border-t-2 border-rose-200/5 sm:pt-10" {...props} />,
   ul: (props: any) => (
     <ul
@@ -15,8 +15,7 @@ const components = {
       {...props}
     />
   ),
-  ol: (props: any) => <ol className="pl-10 space-y-3 list-decimal" {...props} />,
-  strong: (props: any) => <strong className="font-semibold" {...props} />
+  ol: (props: any) => <ol className="pl-10 space-y-3 list-decimal" {...props} />
 }
 
 export function Mdx({ code }: MdxProps) {
