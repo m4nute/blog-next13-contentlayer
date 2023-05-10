@@ -22,7 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="max-w-[940px] mx-auto py-10 w-full">
             <Navbar />
-            <main className="px-2.5 pt-10">{children}</main>
+            <main className="px-2.5 mt-16">{children}</main>
           </div>
         </ThemeProvider>
       </body>

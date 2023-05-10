@@ -50,8 +50,7 @@ export default async function PostPage({ params }: PostProps) {
   return (
     <article className="py-6 w-full prose prose-sm dark:prose-invert max-w-[940px]">
       <h1 className="mb-2 max-w-[680px]">{post.title}</h1>
-      {post.description && <p className="mt-0 text-xl text-slate-700 dark:text-slate-200 max-w-[680px]">{post.description}</p>}
-      <hr className="mt-4 mb-0 max-w-[680px]" />
+      {post.description && <p className="m-0 text-xl text-slate-700 dark:text-slate-200 max-w-[680px]">{post.description}</p>}
 
       <section className="sticky top-6 hidden h-0 xl:!col-start-4 xl:row-start-2 md:block">
         {post.headings ? (
