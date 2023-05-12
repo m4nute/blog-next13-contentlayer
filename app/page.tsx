@@ -1,4 +1,4 @@
-import Posts from "@/components/Posts"
+import Posts from "@/components/PostPreview/Posts"
 
 export default function Home() {
   return (
