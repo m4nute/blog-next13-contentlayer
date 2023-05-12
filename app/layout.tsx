@@ -14,9 +14,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className={`min-h-screen bg-[#FCFCFC] dark:bg-[#1c1c1c] text-black dark:text-white ${fira.className}`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="py-10">
+          <div className="py-5">
             <Navbar />
-            <main className="px-2.5 mt-10">{children}</main>
+            <main className="px-2.5 mt-5">{children}</main>
           </div>
         </ThemeProvider>
       </body>
