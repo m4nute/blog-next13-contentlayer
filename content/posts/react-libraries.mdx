@@ -1,73 +1,105 @@
 ---
-title: Game Changing React Libraries
-description: Must-know React libraries to write better code
+title: ⚛️ Game Changing React Libraries
+description: Must-know React libraries for writing better code
 date: "2023-05-13"
 ---
 
-Before continuing with the snippets guide, make sure to install the extension "_ES7+ React Snippets_" and "_React - Typescript snippets_". There are also some other extensions that might be useful, check them out in my [Settings](/posts/vscode-settings) article.
+After eight months of developing React apps, I've learned a lot. Today, I'll share my favorite tools for React development, so you don't have to discover them by yourself!
 
-# Shortcuts
+# Generals
 
-Here's the list of all the shortcuts I use.
+- **Package Manager**
 
-## Folder Navigation
+There are 3 main options: _npm_, _yarn_ and _pnpm_. I use [PNPM](https://pnpm.io/es/) because it's 3 times faster that npm.
 
-- **Ctrl+Tab**: Change to last tab.
+- **React Frameworks**
 
-- **Ctrl+W**: Close current tab.
+Next.js is my top pick for React frameworks. It offers SEO and production optimizations, built-in endpoints, and automatic routing. It's ideal for generating static and server-rendered applications. Plus, deploying on Vercel is amazing.
 
-- **Ctrl+.**: Open settings tab.
+- **Animations**
 
-- **Ctrl+O**: Open file.
+For animations, Framer Motion is versatile, but its documentation can be challenging to grasp. Animate On Scroll is suitable for scroll animations. CSS is the most comprehensive option but requires more expertise. I don't have a personal favorite; it's best to experiment and find what suits you.
 
-- **Ctrl+K, Ctrl+O**: Open folder.
+- **Linter**
 
-- **Ctrl+`**: Open/Close terminal.
+You could use ESLint for making sure that your code follows a particular code style. There are multiple configs for it, like the Airbnb one or the Next.js default.
 
-## Code Navigation
+- **Deploy**
 
-- **Ctrl+End**: Navigate to the bottom.
+For hosting and deploying your React/Next.js/backend app, consider the following free options: Vercel for versatile hosting (including databases), Netlify for frontend deployment, Railway for backends and databases and PlanetScale and MongoDB Atlas for databases. Explore these platforms to find the best fit for your project.
 
-- **Ctrl+Home**: Navigate to the top.
+- **BaaS**
 
-- **Ctrl+Left** / **Ctrl+Right**: Navigate through entire words.
+For BaaS (Backend as a Service), Pocketbase and Supabase are standout options. They offer real-time functionality, authentication, and query features through intuitive dashboards. Supabase is hosted from the start, while Pocketbase requires deployment (though it can run locally during development).
 
-- **Ctrl+S**: Save current file.
+# Build Tools
 
-- **Ctrl+D**: Select next match (based on selected text).
+- **Vite**
 
-- **Ctrl+F2**: Select all match (based on selected text).
+You should probably be using [Vite](https://vitejs.dev/) by now, create-react-app is no longer a thing. Vite lets you pick a JS framework (or vanilla js as well) among almost all of them, also with the option including TypeScript in your installation.
 
-## Code Manipulation
+- **Next.js**
 
-- **Ctrl+X**: Cut line (delete/copy at the same time).
+Now that Next.js 13.4 dropped and it's production ready, I'd recommend create-next-app for creating your Next.js apps. You can also use create-t3-app for a more complete installation (Prisma, TRPC, etc).
 
-- **Ctrl+Enter**: Insert line above.
+# Routing
 
-- **Ctrl+Shift+Enter**: Insert line below.
+- **React Router**
 
-- **Alt+Up**: Move line up.
+React Router is the most famous React routing library by far, but probably not the best option. It's a bit heavy and doesn't really stand out.
 
-- **Alt+Down**: Move line down.
+- **TanStack Router**
 
-- **Ctrl+/**: Comment whole line (JS & JSX).
+Might be the next big thing. For now I wouldn't use it, since it's still in beta and the docs are incompleted.
 
-- **Alt+Click**: Add additional cursor.
+- **wouter**
 
-# Snippets
+Recently I discovered [wouter](https://github.com/molefrog/wouter). It's an amazing light-weight library for routing and extremely easy to implement. It doesn't even need a wrapper. wouter is 8 times lighter compared to react-router.
 
-I included the snippets extension above. Now, I'll mention the specific snippets I tend to use.
+# Data Fetching
 
-- **clg** => _`console.log()`_
+- **TanStack Query**
 
-- **imd** => _`import { second } from 'first'`_
+TanStack Query, aka React-Query. This is probably the best library for React. It makes fetching, caching and updating server data really easy. You could probably replace useEffect for this, in most cases. Some of its best features are fetching/loading states for queries, dependant queries, optimistic updates, mutations, infinite scroll, compatibility with SSR, etc. Learn this library ASAP and your code will be much more performant and cleaner.
 
-- **imp** => _`import second from 'first'`_
+- **SWR**
 
-- **dob** => _`const {propName} = objectToDestruct`_
+This is a data fetching library supported by Vercel. Even tough it's really good, I prefer TanStack Query because it's more complete, but SWR is probably the closest alternative to it.
 
-- **ust** => _`const [, set] = useState<>()`_
+# State Managment
 
-- **usef** => _`useEffect(() => {   return () => {} }, [])`_
+- **React Context**
 
-- **rfc** => **Empty React Functional Component**
+I started with this one, it's pretty simple. Does the job for storing basic user info or the current theme (light/dark).
+
+- **Redux**
+
+Redux is the most popular one, probably. I haven't used it much. It's a bit heavy and opinionated, but more complete. Wouldn't recommend it for beginners.
+
+- **Zustand**
+
+This is the best one in terms of DX. As easy as React Context, light-weight, 0 boilerplate, just beautiful. Not the best for bigger and more complex applications, I guess.
+
+# Styling
+
+- **UI Libraries**
+
+There are lots of UI Component libraries out there. My favorite one is Mantine. It's easy to setup, works out of the box and has a lot of nice components. Nevertheless, I wouldn't recommend using Mantine for all your projects, or any other UI library really. The more cleaner and less opinionanted way of styling is writing your own CSS.
+
+- **Tailwind CSS**
+
+I use Tailwind CSS for all my projects. Easy, fast and pretty customizable. Don't use it straight away tho, you should know CSS before moving to Tailwind. To complement it you could try shadcn/UI, RadixUI or HeadlessUI, just light-weight and unstyled components to help you develop for Tailwind components.
+
+# Forms
+
+- **React Hook Form**
+
+This one is really good, almost a must. It's simple, flexible and saves you from having to create a state for each field, write errors and make a regex for the email. It does it all for you. It's compatible with Zod, for an easier type validation.
+
+- **Built-In Forms**
+
+If you're using Mantine or other UI libraries like Material-UI, you have the possibility to use its integrated form library. It's not a bad option if you want to take advantage of your UI library and use it for all your project. React Hook Form should be better anyway.
+
+---
+
+That's it for now! I'll update this guide if I discover something new. Right now I'm learning testing. Once I have a clear understanding of the topic, I'll add that section to the article. Stay tuned for more!
