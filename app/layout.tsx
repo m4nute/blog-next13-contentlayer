@@ -4,7 +4,7 @@ import { Fira_Code } from "next/font/google"
 import "./styles/globals.css"
 
 export const metadata = {
-  title: "m4nute Blog",
+  title: "Manuel Gudiño's Blog",
   description: "Manuel Gudiño Blog"
 }
 const fira = Fira_Code({ subsets: ["latin"] })
