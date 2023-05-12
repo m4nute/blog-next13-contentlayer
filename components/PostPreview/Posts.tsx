@@ -5,7 +5,7 @@ import PostTags from "./PostTags"
 
 export default function Posts() {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 mb-20">
       {allPosts.map((post) => (
         <section key={post._id} className="p-5 hover:bg-[#eeeeee] dark:hover:bg-[#171717] rounded-lg transition-all">
           <Link href={post.slug} className="no-underline">
