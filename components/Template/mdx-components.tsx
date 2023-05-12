@@ -8,7 +8,7 @@ const components = {
   h2: (props: any) => <h3 className="pt-8 mt-3 text-xl font-medium sm:text-2xl text-gray-800  dark:text-[#efefef]" {...props} />,
   h3: (props: any) => <h4 className="text-xl font-medium text-gray-700 dark:text-[#e1e1e1]" {...props} />,
   h4: (props: any) => <h5 className="text-lg font-medium text-gray-700 dark:text-[#e1e1e1]" {...props} />,
-  hr: (props: any) => <hr className="relative my-5 border-t-2 border-rose-200/5 sm:pt-10" {...props} />,
+  hr: (props: any) => <hr className="relative my-5 border-t-2 border-gray-300 dark:border-gray-700 sm:pt-10" {...props} />,
   ul: (props: any) => (
     <ul
       className="space-y-3 [li>&]:mt-4 [&>li]:pl-4 before:[&>li]:absolute before:[&>li]:left-1 before:[&>li]:w-1.5 before:[&>li]:rounded-full before:[&>li]:bg-rose-100/20"
