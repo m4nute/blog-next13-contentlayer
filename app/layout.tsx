@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar"
-import { ThemeProvider } from "@/components/Template/theme-provider"
+import { ThemeProvider } from "@/components/Template/ThemeProvider"
 import { Fira_Code } from "next/font/google"
 import "./styles/globals.css"
 
