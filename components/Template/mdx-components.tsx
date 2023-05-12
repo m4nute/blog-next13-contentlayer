@@ -4,7 +4,7 @@ interface MdxProps {
   code: string
 }
 const components = {
-  h1: (props: any) => <h2 className=" pt-8 mt-6 text-xl mb-4 font-medium border-t-2 border-[#2c2c2c] sm:text-3xl" {...props} />,
+  h1: (props: any) => <h2 className=" pt-8 mt-6 text-xl mb-4 font-medium border-t-2 border-gray-300 dark:border-[#2c2c2c] sm:text-3xl" {...props} />,
   h2: (props: any) => <h3 className="pt-8 mt-3 text-xl font-medium sm:text-2xl text-gray-800  dark:text-[#efefef]" {...props} />,
   h3: (props: any) => <h4 className="text-xl font-medium text-gray-700 dark:text-[#e1e1e1]" {...props} />,
   h4: (props: any) => <h5 className="text-lg font-medium text-gray-700 dark:text-[#e1e1e1]" {...props} />,
