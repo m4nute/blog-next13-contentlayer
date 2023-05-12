@@ -52,17 +52,20 @@ export default async function PostPage({ params }: PostProps) {
       <section className="hidden fixed h-1 lg:block">
         {post.headings ? (
           <div className="space-y-2 text-sm">
-            <h2 className="text-[#f1f1f1] mb-0 mt-0">Sections</h2>
+            <h2 className="text-black dark:text-[#f1f1f1] mb-0 mt-0">Sections</h2>
             <div className="overflow-scroll pr-5">
               {post.headings.map((heading: any) => {
                 return (
                   <a
                     key={heading.slug}
                     href={`#${heading.slug}`}
-                    className={clsx("block text-gray-400 mt-1 underline-offset-2 no-underline transition-all hover:text-white hover:underline", {
-                      "pl-3": heading.heading === 2,
-                      "pl-5": heading.heading === 3
-                    })}>
+                    className={clsx(
+                      "block text-gray-800 dark:text-gray-400 mt-1 underline-offset-2 no-underline transition-all hover:text-black dark:hover:text-white hover:underline",
+                      {
+                        "pl-3": heading.heading === 2,
+                        "pl-5": heading.heading === 3
+                      }
+                    )}>
                     {heading.heading === 1 ? heading.text : `.${heading.text}`}
                   </a>
                 )
