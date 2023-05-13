@@ -12,7 +12,7 @@ export default function Posts() {
   return (
     <div className="flex flex-col gap-6 mb-20">
       {allPosts.map((post) => (
-        <section key={post._id} className="p-5 hover:bg-[#e5e5e5] dark:hover:bg-[#333333] bg-[#f1f1f1] dark:bg-[#1d1d1d] rounded-lg">
+        <section key={post._id} className="p-5 hover:bg-[#f6f6f6] dark:hover:bg-[#111111] transition-all duration-200 rounded-lg hover:shadow-md">
           <Link href={post.slug} className="no-underline">
             <div className="flex gap-2">
               <PostTags text={format(parseISO(post.date), "MMM dd, yyyy")} />
