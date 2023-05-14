@@ -9,7 +9,7 @@ export default function Posts() {
   })
 
   return (
-    <div className="flex flex-col gap-6 mb-20">
+    <div className="flex flex-col gap-4 mb-20">
       {allPosts.map((post) => (
         <section key={post._id} className="p-5 hover:bg-[#f6f6f6] dark:hover:bg-[#111111] transition-all duration-200 rounded-lg hover:shadow-md">
           <Link href={post.slug} className="no-underline">
