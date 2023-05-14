@@ -2,7 +2,6 @@ import { allPosts } from "@/.contentlayer/generated"
 import Link from "next/link"
 import { parseISO, format } from "date-fns"
 import PostTags from "./PostTags"
-import { motion } from "framer-motion"
 
 export default function Posts() {
   allPosts.sort((a: any, b: any) => {
