@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="py-5">
             <Navbar />
-            <main className="px-2.5">{children}</main>
+            <main className="px-2.5 h-full">{children}</main>
           </div>
         </ThemeProvider>
       </body>
