@@ -28,3 +28,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+a {
+  text-underline-offset: 4px;
+}
