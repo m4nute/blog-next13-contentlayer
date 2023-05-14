@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar"
 import { ThemeProvider } from "@/components/Template/ThemeProvider"
 import { Fira_Code } from "next/font/google"
 import "./styles/globals.css"
+import PageTransition from "@/components/PageTransition"
 
 export const metadata = {
   title: "Manuel Gudiño's Blog",
@@ -16,7 +17,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="py-5">
             <Navbar />
-            <main className="px-2.5 h-full">{children}</main>
+            <main className="px-2.5 h-full">
+              <PageTransition>{children}</PageTransition>
+            </main>
           </div>
         </ThemeProvider>
       </body>
