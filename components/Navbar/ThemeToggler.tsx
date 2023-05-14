@@ -3,6 +3,7 @@
 import { useTheme } from "next-themes"
 import { IconSun } from "@tabler/icons-react"
 import { useEffect, useState } from "react"
+import { motion } from "framer-motion"
 
 export default function ModeToggle() {
   const { setTheme, theme } = useTheme()
@@ -15,9 +16,19 @@ export default function ModeToggle() {
         className="bg-[#d1d1d1] dark:bg-[#373737] p-2 flex justify-center items-center w-10 h-10 rounded-lg hover:scale-105">
         {mounted ? (
           !theme || theme === "dark" ? (
-            <IconSun size={24} stroke={1.3} color="white" />
+            <motion.div
+              initial={{ opacity: 0, y: 5 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 5 }}
+              transition={{ delay: 0.05, duration: 0.1 }}>
+              <IconSun size={24} stroke={1.3} color="white" />
+            </motion.div>
           ) : (
-            <svg
+            <motion.svg
+              initial={{ opacity: 0, y: 5 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 5 }}
+              transition={{ delay: 0.05, duration: 0.1 }}
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-moon-filled"
               width={24}
@@ -30,7 +41,7 @@ export default function ModeToggle() {
               strokeLinejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
               <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" fill="#000000"></path>
-            </svg>
+            </motion.svg>
           )
         ) : null}
       </button>
