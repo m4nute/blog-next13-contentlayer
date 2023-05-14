@@ -3,7 +3,6 @@ import { allPosts } from "contentlayer/generated"
 import clsx from "clsx"
 import { Metadata } from "next"
 import { Mdx } from "@/components/Template/mdx-components"
-import { motion } from "framer-motion"
 
 interface PostProps {
   params: {
