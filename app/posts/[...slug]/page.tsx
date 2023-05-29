@@ -53,7 +53,7 @@ export default async function PostPage({ params }: PostProps) {
         {post.headings ? (
           <div className="space-y-2 text-sm">
             <h2 className="text-black dark:text-[#f1f1f1] mb-0 mt-0">Sections</h2>
-            <div className="overflow-scroll pr-5">
+            <div className="overflow-hidden pr-5">
               {post.headings.map((heading: any) => {
                 return (
                   <a
@@ -65,7 +65,8 @@ export default async function PostPage({ params }: PostProps) {
                         "pl-3": heading.heading === 2,
                         "pl-5": heading.heading === 3
                       }
-                    )}>
+                    )}
+                  >
                     {heading.heading === 1 ? heading.text : `.${heading.text}`}
                   </a>
                 )
@@ -77,7 +78,9 @@ export default async function PostPage({ params }: PostProps) {
 
       <div className="max-w-[680px] mx-auto w-full">
         <h2 className="mb-2 max-w-[680px] text-3xl">{post.title}</h2>
-        {post.description && <p className="m-0 text-xl text-slate-700 dark:text-slate-200 max-w-[680px]">{post.description}</p>}
+        {post.description && (
+          <p className="m-0 text-xl text-slate-700 dark:text-slate-200 max-w-[680px]">{post.description}</p>
+        )}
         <Mdx code={post.body.code} />
       </div>
     </article>
